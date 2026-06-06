@@ -1,0 +1,16 @@
+# hermes-webui-wrap dependencies
+# Python 3.11+ required
+
+# HTTP server & routing
+bottle>=0.13
+wsgiref>=0.1
+
+# Async support
+gevent>=23.0
+greenlet>=3.0
+
+# Optional: production WSGI server
+gunicorn>=21.0
+
+# Utilities
+python-dotenv>=1.0
