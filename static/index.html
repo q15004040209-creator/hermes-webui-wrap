@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermes WebUI — hermes-webui-wrap</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h2>Hermes</h2>
+      <button id="btn-new-chat" title="New chat">+</button>
+    </div>
+    <div id="session-list"></div>
+    <div class="sidebar-footer">
+      <button id="btn-settings" title="Settings">&#9881;</button>
+    </div>
+  </aside>
+
+  <!-- Main panel -->
+  <main id="main">
+    <div id="chat-container">
+      <div id="messages"></div>
+      <div id="typing-indicator" class="hidden">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+    <div id="composer">
+      <div id="context-bar">
+        <span id="token-count">Tokens: 0</span>
+        <span id="model-info">Model: --</span>
+      </div>
+      <div id="input-row">
+        <textarea id="msg-input" placeholder="Send a message..." rows="1"></textarea>
+        <button id="btn-send" title="Send (Enter)">&#9654;</button>
+      </div>
+     <div id="toolbar">
+        <button class="tool-btn" data-cmd="help">/help</button>
+        <button class="tool-btn" data-cmd="clear">/clear</button>
+        <button class="tool-btn" data-cmd="mode">/mode</button>
+        <button class="tool-btn" data-cmd="workspace">/workspace</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Right panel: workspace -->
+  <aside id="workspace-panel" class="hidden">
+    <div class="panel-header">
+      <span>Workspace</span>
+      <button id="btn-close-workspace">&#10005;</button>
+    </div>
+    <div id="file-tree"></div>
+  </aside>
+</div>
+
+<script src="/static/ui.js"></script>
+</body>
+</html>
